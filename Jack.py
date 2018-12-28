@@ -121,6 +121,7 @@ def main():
     end_game = False
     global balance
     balance = get_money()
+    counter = 0
     while not end_game:
         try:
             j = Blackjack(balance)
@@ -152,7 +153,8 @@ def main():
                 f = fd.read()
                 if f.split("\n")[0] == "yes":
                     end_game = True
-
+            counter += 1
+            print("Counter      {}".format(counter))
             raw_input("Press any key...")
         except KeyboardInterrupt:
             quit(0)
@@ -161,3 +163,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
