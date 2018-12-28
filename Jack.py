@@ -128,6 +128,7 @@ def main():
                 n = j.next_card()
                 j.cards.append(j.c.render_card(n[1]))
                 j.hands.append(n[1])
+                j.deck_remove_card(n[0])
             j.gui()
             j.get_holds()
 
